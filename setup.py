@@ -11,7 +11,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "start-fastapi = app.cli:main"
+            "fastapi = app.cli:main"
         ]
     },
     author="Abhishek Rajput",
