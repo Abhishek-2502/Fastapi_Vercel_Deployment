@@ -19,7 +19,7 @@ Ensure your FastAPI application is pushed to a GitHub repository.
 - Select `Other Framework`.
 - Set the **Build Command** as:
   ```sh
-  pip install .
+  pip install -r requirements.txt
   ```
 - Set the **Install Command** as:
   ```sh
