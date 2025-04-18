@@ -31,19 +31,21 @@ Ensure your FastAPI application is pushed to a GitHub repository.
 Ensure your `vercel.json` is properly configured:
 ```json
 {
-  "builds": [
-    {
-      "src": "app/main.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "app.main:app"
-    }
-  ]
-}
+    "version": 2,
+    "builds": [
+      {
+        "src": "app/main.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb" }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "app/main.py"
+      }
+    ]
+  }
 ```
 ### Screenshot
 
